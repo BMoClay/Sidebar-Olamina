@@ -1,1 +1,35 @@
-I am the header
+<div class="relative bg-white">
+    <div class="mx-auto px-6 sm:px-6">
+        <div class="flex justify-left items-left px-16 py-2 md:justify-start md:space-x-16">
+            <!-- SEARCH BAR / CART BUTTON / ACCOUNT LINKS IF ENABLED-->
+            <div class="flex-row justify-start px-4 lg:flex-1 truncate">
+                <h1 class="font-bold truncate">*search</h1>
+                <!-- STORE NAME / STORE LOGO-->
+                <!-- <h1 class="font-bold truncate">{{ shop.name }}</h1> -->
+            </div>
+            <div class="flex justify-start lg:flex-auto">
+                <h1 class="font-bold truncate">placeholder (this will be fret not tincture)</h1>
+            </div>
+            <!-- NAV MENU (Which will be my sidebar nav menu)-->
+            <div class="hidden md:flex space-x-10">
+                {% for link in section.settings.menu.links %}
+                    
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Header",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "Heading Navigation Menu"
+        }
+    ]
+}
+{% endschema %}
